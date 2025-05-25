@@ -1,0 +1,129 @@
+[workspace]
+members = [
+  "async/ntex/00_smoke_test",
+  "async/ntex/01_prime_time",
+  "async/ntex/02_means_to_an_end",
+  "async/ntex/03_budget_chat",
+  "async/ntex/04_unusual_database_program",
+  "async/ntex/05_mob_in_the_middle",
+  "async/ntex/06_speed_daemon",
+  "async/ntex/07_line_reversal",
+  "async/ntex/08_insecure_sockets_layer",
+  "async/ntex/09_job_centre",
+  "async/ntex/10_voracious_code_storage",
+  "async/ntex/11_pest_control",
+  "async/smol/00_smoke_test",
+  "async/smol/01_prime_time",
+  "async/smol/02_means_to_an_end",
+  "async/smol/03_budget_chat",
+  "async/smol/04_unusual_database_program",
+  "async/smol/05_mob_in_the_middle",
+  "async/smol/06_speed_daemon",
+  "async/smol/07_line_reversal",
+  "async/smol/08_insecure_sockets_layer",
+  "async/smol/09_job_centre",
+  "async/smol/10_voracious_code_storage",
+  "async/smol/11_pest_control",
+  "async/tokio/00_smoke_test",
+  "async/tokio/01_prime_time",
+  "async/tokio/02_means_to_an_end",
+  "async/tokio/03_budget_chat",
+  "async/tokio/04_unusual_database_program",
+  "async/tokio/05_mob_in_the_middle",
+  "async/tokio/06_speed_daemon",
+  "async/tokio/07_line_reversal",
+  "async/tokio/08_insecure_sockets_layer",
+  "async/tokio/09_job_centre",
+  "async/tokio/10_voracious_code_storage",
+  "async/tokio/11_pest_control",
+  "epoll/00_smoke_test",
+  "epoll/01_prime_time",
+  "epoll/02_means_to_an_end",
+  "epoll/03_budget_chat",
+  "epoll/04_unusual_database_program",
+  "epoll/05_mob_in_the_middle",
+  "epoll/06_speed_daemon",
+  "epoll/07_line_reversal",
+  "epoll/08_insecure_sockets_layer",
+  "epoll/09_job_centre",
+  "epoll/10_voracious_code_storage",
+  "epoll/11_pest_control",
+  "io_uring/00_smoke_test",
+  "io_uring/01_prime_time",
+  "io_uring/02_means_to_an_end",
+  "io_uring/03_budget_chat",
+  "io_uring/04_unusual_database_program",
+  "io_uring/05_mob_in_the_middle",
+  "io_uring/06_speed_daemon",
+  "io_uring/07_line_reversal",
+  "io_uring/08_insecure_sockets_layer",
+  "io_uring/09_job_centre",
+  "io_uring/10_voracious_code_storage",
+  "io_uring/11_pest_control",
+  "may/00_smoke_test",
+  "may/01_prime_time",
+  "may/02_means_to_an_end",
+  "may/03_budget_chat",
+  "may/04_unusual_database_program",
+  "may/05_mob_in_the_middle",
+  "may/06_speed_daemon",
+  "may/07_line_reversal",
+  "may/08_insecure_sockets_layer",
+  "may/09_job_centre",
+  "may/10_voracious_code_storage",
+  "may/11_pest_control",
+  "threaded/00_smoke_test",
+  "threaded/01_prime_time",
+  "threaded/02_means_to_an_end",
+  "threaded/03_budget_chat",
+  "threaded/04_unusual_database_program",
+  "threaded/05_mob_in_the_middle",
+  "threaded/06_speed_daemon",
+  "threaded/07_line_reversal",
+  "threaded/08_insecure_sockets_layer",
+  "threaded/09_job_centre",
+  "threaded/10_voracious_code_storage",
+  "threaded/11_pest_control",
+
+  "util",
+]
+resolver = "3"
+
+[workspace.dependencies]
+util = { path = "util" }
+
+color-eyre = "0.6.4"
+primal = "0.3.3"
+tracing = "0.1.40"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
+
+# Variant "async/ntex"
+ntex-neon = { version = "0.1.26", features = ["io-uring"] }
+ntex-net = { version = "2.5.20", features = ["neon", "io-uring"] }
+
+# Variant "async/tokio"
+tokio = { version = "1.45.1", features = ["full"] }
+# TODO: console-subscriber, tracing-console integration? See also Hayden Stainsby's articles on tokio instrumentation.
+
+# Variant "async/smol"
+async-executor = "1.13.2"
+async-io = "2.4.0"
+futures-lite = { version = "2.6.0", default-features = false, features = ["std"] }
+
+# Variant "epoll"
+polling = "3.8.0"
+
+# Variant "io_uring"
+rustix-uring = "0.6.0"
+
+# Variant "may"
+may = "0.3.51"
+
+# Variant "threaded"
+socket2 = "0.5.9"
+
+[workspace.package]
+authors = ["Rust Berlin on Location 🌈"]
+description = "Playing with https://protohackers.com/problems."
+edition = "2024"
+version = "0.1.0"

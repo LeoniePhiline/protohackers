@@ -1,0 +1,12 @@
+[package]
+name = "may_speed_daemon"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+util.workspace = true
+
+color-eyre.workspace = true
+
+may.workspace = true

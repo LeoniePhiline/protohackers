@@ -1,0 +1,13 @@
+[package]
+name = "async_tokio_voracious_code_storage"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+util.workspace = true
+
+color-eyre.workspace = true
+tracing.workspace = true
+
+tokio.workspace = true

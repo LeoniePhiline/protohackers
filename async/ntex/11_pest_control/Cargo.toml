@@ -1,0 +1,13 @@
+[package]
+name = "async_ntex_pest_control"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+util.workspace = true
+
+color-eyre.workspace = true
+tracing.workspace = true
+
+ntex-net.workspace = true
