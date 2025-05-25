@@ -1,0 +1,13 @@
+[package]
+name = "threaded_pest_control"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+util.workspace = true
+
+color-eyre.workspace = true
+
+socket2.workspace = true
+tracing.workspace = true

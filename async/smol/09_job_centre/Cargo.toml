@@ -1,0 +1,15 @@
+[package]
+name = "async_smol_job_centre"
+description.workspace = true
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+util.workspace = true
+
+color-eyre.workspace = true
+tracing.workspace = true
+
+async-executor.workspace = true
+async-io.workspace = true
+futures-lite.workspace = true
