@@ -11,3 +11,4 @@ color-eyre.workspace = true
 tracing.workspace = true
 
 tokio.workspace = true
+pin-project-lite = "0.2.16"

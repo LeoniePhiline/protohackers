@@ -445,6 +445,7 @@ name = "async_tokio_smoke_test"
 version = "0.1.0"
 dependencies = [
  "color-eyre",
+ "pin-project-lite",
  "tokio",
  "tracing",
  "util",
